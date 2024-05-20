@@ -9,7 +9,8 @@
 	"homepage": "git+https://github.com/castrogarciajs/preact-start.git",
 	"scripts": {
 		"postinstall": "esno scripts/prepare.ts",
-		"fmt": "biome format --write ."
+		"fmt": "biome format --write .",
+		"lint": " biome lint --apply ."
 	},
 	"keywords": ["SSR", "Preact", "Modern", "Web"],
 	"author": "castrogarciajs",
