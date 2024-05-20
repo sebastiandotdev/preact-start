@@ -8,6 +8,7 @@
 	},
 	"homepage": "git+https://github.com/castrogarciajs/preact-start.git",
 	"scripts": {
+		"postinstall": "esno scripts/prepare.ts",
 		"fmt": "biome format --write ."
 	},
 	"keywords": [
