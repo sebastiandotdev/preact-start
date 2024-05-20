@@ -27,8 +27,8 @@
 		"simple-git-hooks": "^2.11.1"
 	},
 	"simple-git-hooks": {
-		"pre-commit": "npx esno scripts/prepare.ts && npx lint-staged"
-	},
+    	"pre-commit": "npx esno scripts/prepare.ts && npx lint-staged"
+  	},
 	"lint-staged": {
 		"*": "biome format --write --no-errors-on-unmatched"
 	}
