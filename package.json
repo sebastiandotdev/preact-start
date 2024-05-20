@@ -8,16 +8,25 @@
 	},
 	"homepage": "git+https://github.com/castrogarciajs/preact-start.git",
 	"scripts": {
-		"prepare": "husky",
 		"fmt": "biome format --write ."
 	},
-	"keywords": ["SSR", "Preact", "Modern", "Web"],
+	"keywords": [
+		"SSR",
+		"Preact",
+		"Modern",
+		"Web"
+	],
 	"author": "castrogarciajs",
 	"license": "mit",
 	"devDependencies": {
 		"@biomejs/biome": "1.7.3",
-		"husky": "^9.0.11",
-		"lint-staged": "^15.2.2"
+		"esno": "^4.7.0",
+		"execa": "^9.1.0",
+		"lint-staged": "^15.2.2",
+		"simple-git-hooks": "^2.11.1"
+	},
+	"simple-git-hooks": {
+		"pre-commit": "npx esno scripts/prepare.ts && npx lint-staged"
 	},
 	"lint-staged": {
 		"*": "biome format --write --no-errors-on-unmatched"
