@@ -8,5 +8,19 @@
 		"rules": {
 			"recommended": true
 		}
+	},
+
+	"formatter": {
+		"enabled": true,
+		"lineEnding": "lf",
+		"lineWidth": 80
+	},
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "single",
+			"semicolons": "asNeeded",
+			"trailingComma": "all",
+			"jsxQuoteStyle": "double"
+		}
 	}
 }
