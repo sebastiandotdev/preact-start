@@ -8,8 +8,10 @@
 	},
 	"homepage": "git+https://github.com/castrogarciajs/preact-start.git",
 	"scripts": {
+		"dev": "unbuild --stub",
 		"postinstall": "esno scripts/prepare.ts",
 		"fmt": "biome format --write .",
+		"build": "unbuild",
 		"lint": " biome lint --apply ."
 	},
 	"keywords": ["SSR", "Preact", "Modern", "Web"],
@@ -20,7 +22,8 @@
 		"esno": "^4.7.0",
 		"execa": "^9.1.0",
 		"lint-staged": "^15.2.2",
-		"simple-git-hooks": "^2.11.1"
+		"simple-git-hooks": "^2.11.1",
+		"unbuild": "^2.0.0"
 	},
 	"simple-git-hooks": {
 		"pre-commit": "npx esno scripts/prepare.ts && npx lint-staged"
