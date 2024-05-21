@@ -1,0 +1,12 @@
+{
+	"name": "@preact-start/templates",
+	"version": "0.1.0",
+	"description": "Ui templates for Preact Start inspired by nuxt",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC"
+}

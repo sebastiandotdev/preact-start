@@ -22,5 +22,11 @@
 			"trailingComma": "all",
 			"jsxQuoteStyle": "double"
 		}
+	},
+	"json": {
+		"formatter": {
+			"enabled": true,
+			"lineEnding": "lf"
+		}
 	}
 }
