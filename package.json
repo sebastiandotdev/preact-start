@@ -1,5 +1,5 @@
 {
-	"name": "preact-start",
+	"name": "@preact-start/core",
 	"version": "0.1.0",
 	"description": "A framework for Modern Web Apps, powered by Preact.",
 	"packageManager": "pnpm@9.1.1",
