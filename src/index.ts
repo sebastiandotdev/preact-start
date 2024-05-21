@@ -1,1 +1,2 @@
-export const preact = 'init'
+export * from './core/preact-start'
+export * from './core/build'
