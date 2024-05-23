@@ -1,34 +1,54 @@
 {
-	"name": "@preact-start/core",
-	"version": "0.1.0",
-	"description": "A framework for Modern Web Apps, powered by Preact.",
-	"packageManager": "pnpm@9.1.1",
-	"bugs": {
-		"url": "git+htps://github.com/castrogarciajs/preact-start.git"
-	},
-	"homepage": "git+https://github.com/castrogarciajs/preact-start.git",
-	"scripts": {
-		"dev": "unbuild --stub",
-		"postinstall": "esno scripts/prepare.ts",
-		"fmt": "biome format --write .",
-		"build": "unbuild",
-		"lint": " biome lint --apply ."
-	},
-	"keywords": ["SSR", "Preact", "Modern", "Web"],
-	"author": "castrogarciajs",
-	"license": "mit",
-	"devDependencies": {
-		"@biomejs/biome": "1.7.3",
-		"esno": "^4.7.0",
-		"execa": "^9.1.0",
-		"lint-staged": "^15.2.2",
-		"simple-git-hooks": "^2.11.1",
-		"unbuild": "^2.0.0"
-	},
-	"simple-git-hooks": {
-		"pre-commit": "npx esno scripts/prepare.ts && npx lint-staged"
-	},
-	"lint-staged": {
-		"*": "biome format --write --no-errors-on-unmatched"
-	}
+  "name": "@preact-start/core",
+  "type": "module",
+  "version": "0.1.0",
+  "packageManager": "pnpm@9.1.1",
+  "description": "A framework for Modern Web Apps, powered by Preact.",
+  "author": "castrogarciajs",
+  "license": "mit",
+  "homepage": "git+https://github.com/castrogarciajs/preact-start.git",
+  "bugs": {
+    "url": "git+htps://github.com/castrogarciajs/preact-start.git"
+  },
+  "keywords": [
+    "SSR",
+    "Preact",
+    "Modern",
+    "Web"
+  ],
+  "scripts": {
+    "dev": "unbuild --stub",
+    "postinstall": "esno tools/prepare.ts",
+    "build": "node ./build.mjs && pnpm tsc",
+    "lint": " eslint .",
+    "lint:fix": "eslint --fix ."
+  },
+  "dependencies": {
+    "glob": "10.3.16"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "2.18.1",
+    "eslint": "8.57.0",
+    "eslint-plugin-format": "^0.1.1",
+    "esno": "^4.7.0",
+    "execa": "^9.1.0",
+    "lint-staged": "^15.2.2",
+    "preact": "10.22.0",
+    "simple-git-hooks": "^2.11.1",
+    "typescript": "5.4.5",
+    "vinxi": "0.3.11"
+  },
+  "pnpm": {
+    "allowedDeprecatedVersions": {
+      "are-we-there-yet": "2.0.0",
+      "gauge": "3.0.2",
+      "npmlog": "5.0.1"
+    }
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx esno tools/prepare.ts && npx lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint . --fix"
+  }
 }
